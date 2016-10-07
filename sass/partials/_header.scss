@@ -1,0 +1,143 @@
+/* Header
+-----------------------------------------------------------------------------*/
+
+.header {
+	position: relative;
+	padding: 0;
+	background: #fe5619 url(../img/h_bg.png) right center;
+	background-size: cover;
+	margin: 0;
+	display: flex;
+	height: 100vh;
+
+	.container{
+		margin: auto;
+		width: 100%;
+	}
+}
+
+.logo {
+	font-size: 26px;
+	float: left;
+	letter-spacing: 0.03em;
+	margin: 0;
+
+	&__link {
+		color: #fff;
+		display: block;
+		text-decoration: none;
+		@include transition (none);
+	}
+}
+
+.headline{
+	/*position: absolute;
+	top: 10vw;
+	left: 0;
+	right: 0;
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 0 10px;*/
+	position: relative;
+}
+
+.menu-btn{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: -10px;
+	width: 50px;
+	height: 50px;
+	background: url(../svg/menu_btn.svg) center center no-repeat;
+	background-size: 100%;
+	cursor: pointer;
+
+	&.close{
+		background: url(../svg/menu_close.svg) center center no-repeat;
+		background-size: 100%;
+	}
+}
+
+.main-nav{
+	&.closed{
+		display: block;
+	}
+}
+
+.main-menu{
+	position: relative;
+	top: -2px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 16px;
+	float: right;
+
+	&__item{
+		display: inline-block;
+		margin: 0 0 0 34px;
+	}
+
+	&__link{
+		position: relative;
+		text-transform: uppercase;
+		color: #fff;
+		display: block;
+		text-decoration: none;
+		padding: 11px 5px 10px;
+
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 50%;
+			right: 50%;
+			opacity: 0;
+			height: 1px;
+			background: #fff;
+			@include transition (all ease .2s);
+		}
+
+		&:hover{
+			&:after{
+				left: 0;
+				right: 0;
+				opacity: 1;
+				bottom: 5px;
+			}
+		}
+	}
+}
+
+.slogan{
+	position: relative;
+	clear: both;
+	margin: 72px 0 0 -5px;
+	font: 88px/1.07 $lato;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 0.06em;
+
+	&:after{
+		content: '';
+		position: absolute;
+		left: -96px;
+		top: 46px;
+		width: 62px;
+		height: 9px;
+		background: #fff;
+	}
+}
+
+.scroll-me-please{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2.5vw;
+	margin: auto;
+	width: 29px;
+	height: 47px;
+	background: url(../svg/mouse_white.svg) no-repeat;
+	background-size: cover;
+}

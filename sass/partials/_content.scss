@@ -1,0 +1,371 @@
+/* Content
+-----------------------------------------------------------------------------*/
+
+.content{
+	min-height: 1000px;
+}
+
+.page-section{
+	margin: 0;
+	padding: 10px 0;
+
+	&.mission{
+		background: url(../img/mission_bg.jpg) center center no-repeat;
+		background-size: cover;
+		margin: 0;
+
+		.section-title{
+			color: #fff;
+			margin: 82px 0 58px;
+		}
+
+		.container{
+			max-width: 786px;
+		}
+
+		.event-links{
+			margin: 18px 0 65px;
+		}
+
+		.address{
+			.container{
+				max-width: 526px;
+			}
+		}
+	}
+}
+
+.section-title {
+	margin: 60px 0 -22px;
+	text-align: center;
+	color: $clr-orange;
+	font-size: 110px;
+	font-family: $lato;
+	font-weight: 900;
+	text-transform: lowercase;
+	letter-spacing: 0.03em;
+}
+
+.mission{
+	color: #fff;
+
+	&__desc{
+		font: 20px/1.54 $lato;
+		letter-spacing: 0.03em;
+		margin: 24px 0 24px;
+	}
+
+	&__link{
+		text-align: center;
+		font-size: 26px;
+		margin: 57px 0 66px;
+		letter-spacing: 0.03em;
+
+		a{
+			color: #fff;
+
+			&:hover{
+				color: $clr-orange;
+			}
+		}
+	}
+
+	&__socials-title{
+		text-align: center;
+	}
+}
+
+.event-item{
+	padding-top: 22px;
+	border-bottom: 1px solid $clr-grey;
+
+	&:first-child{
+		padding-top: 0;
+	}
+
+	&__descr{
+		font: 18px/1.68 $lato;
+		letter-spacing: 0.03em;
+	}
+
+	.container{
+		max-width: 730px;
+	}
+}
+
+.event-logo{
+	text-align: center;
+	margin: 68px 0 43px;
+
+	&__img{
+
+	}
+
+	&__title{
+		font-size: 40px;
+		font-weight: 700;
+		font-family: $lato;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin: 15px 0;
+		line-height: 1.16;
+
+		&.green{
+			color: $clr-green;
+		}
+
+		&.red{
+			color: $clr-red;
+		}
+
+		&.blue{
+			color: $clr-blue;
+		}
+	}
+
+	&__light{
+		font-weight: 300;
+	}
+}
+
+.event-links{
+	padding: 0;
+	margin: 52px 0 87px;
+	list-style: none;
+	text-align: center;
+
+	&__item{
+		display: inline-block;
+		margin: 0 20px;
+		vertical-align: top;
+	}
+
+	&__link{
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 32px;
+		color: #b3b2b2;
+
+		&.m:after,
+		&.tw:after,
+		&.fb:after,
+		&.yt:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 0;
+			background-color: #fff;
+			@include transition (all linear .1s);
+		}
+
+		&:hover{
+			&:after{
+				height: 32px;
+			}
+		}
+
+		&.abs{
+			position: relative;
+			width: auto;
+			line-height: 32px;
+			padding-right: 16px;
+
+			&:after{
+				content: '';
+				position: absolute;
+				top: 13px;
+				right: 0;
+				height: 9px;
+				width: 9px;
+				background: #b3b2b2;
+				@include transform(rotate(45deg));
+				@include transition (background linear .2s);
+			}
+
+			&:before{
+				content: '';
+				position: absolute;
+				top: 13px;
+				right: 3px;
+				height: 9px;
+				width: 9px;
+				background: #fff;
+				@include transform(rotate(45deg));
+				z-index: 1;
+			}
+
+			&:hover{
+				color: $clr-orange;
+				text-decoration: none;
+
+				&:after{
+					background: $clr-orange;
+				}
+			}
+		}
+		
+		&.m{
+			background: url(../svg/socials_m_gray.svg) center center no-repeat;
+
+			&:after{
+				background: #fff url(../svg/socials_m_clrd.svg) center bottom no-repeat;
+				background-size: 40px 32px;
+			}
+		}
+		&.fb{
+			background: url(../svg/socials_fb_gray.svg) center center no-repeat;
+
+			&:after{
+				background: #fff url(../svg/socials_fb_clrd.svg) center bottom no-repeat;
+				background-size: 40px 32px;
+			}
+		}
+		&.tw{
+			background: url(../svg/socials_tw_gray.svg) center center no-repeat;
+
+			&:after{
+				background: #fff url(../svg/socials_tw_clrd.svg) center bottom no-repeat;
+				background-size: 40px 32px;
+			}
+		}
+		&.yt{
+			background: url(../svg/socials_yt_gray.svg) center center no-repeat;
+
+			&:after{
+				background: #fff url(../svg/socials_yt_clrd.svg) center bottom no-repeat;
+				background-size: 40px 32px;
+			}
+		}
+	}
+
+	&.orange{
+
+		.event-links__item{
+			margin: 0 10px;
+		}
+
+		.event-links__link{
+			width: 44px;
+			height: 44px;
+
+			&:hover{
+				&:after{
+					height: 44px;
+				}
+			}
+
+			&.fb{
+				background: url(../svg/socials_fb_orange.svg) center center no-repeat;
+					background-size: 44px 44px;
+
+				&:after{
+					background: url(../svg/socials_fb_clrd.svg) center bottom no-repeat;
+					background-size: 44px 44px;
+				}
+			}
+			&.tw{
+				background: url(../svg/socials_tw_orange.svg) center center no-repeat;
+					background-size: 44px 44px;
+
+				&:after{
+					background: url(../svg/socials_tw_clrd.svg) center bottom no-repeat;
+					background-size: 44px 44px;
+				}
+			}
+		}
+	}
+}
+
+.event-media{
+	position: relative;
+	margin: 100px 0 0;
+
+	&__video{
+		width: 100%;
+		height: 536px;
+	}
+
+	&__photos{
+		position: absolute;
+		bottom: -20px;
+		right: 0px;
+		width: 240px;
+		height: 240px;
+		z-index: 100;
+		background: url(../pic/event_photos.jpg) center center no-repeat;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+
+		&:hover{
+			.event-media__photos-frame{
+				background: rgba(0, 0, 0, 0.2);
+				-webkit-transform: translate(-18px, 18px);
+				 -moz-transform: translate(-18px, 18px);
+					-ms-transform: translate(-18px, 18px);
+					 -o-transform: translate(-18px, 18px);
+						transform: translate(-18px, 18px);
+			}
+		}
+	}
+
+	&__photos-frame{
+		font-size: 26px;
+		position: absolute;
+		left: 18px;
+		bottom: 18px;
+		width: 240px;
+		height: 240px;
+		border: 8px solid $clr-orange;
+		background: rgba(0, 0, 0, 0.4);
+		pointer-events: none;
+		text-align: center;
+		padding-top: 80px;
+		color: #fff;
+		text-decoration: underline;
+		@include transition (all ease-out .14s);
+	}
+}
+
+.sponsors-block{
+	text-align: justify;
+	padding: 0;
+	margin: 46px 0 36px;
+
+	&__img-wrap{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 68px 0 80px 0;
+		width: 33%;
+
+		&:hover{
+			.sponsors-block__img{
+				@include transform(scale(0.95, 0.95));
+			}
+		}
+	}
+
+	&__img{
+		display: block;
+		margin: 0 auto;
+		@include transition (all ease-out .14s);
+	}
+}
+
+.address{
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	font: 18px/1.46 $lato;
+    letter-spacing: 0.03em;
+
+	&__left{
+		float: left;
+		margin: 33px 0 20px;
+	}
+
+	&__right{
+		float: right;
+		margin: 33px 0 20px;
+	}
+}
