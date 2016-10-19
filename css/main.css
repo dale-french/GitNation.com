@@ -579,11 +579,12 @@ $icon-spacing: 4px;
   background-size: cover;
   margin: 0;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 .header .container {
   margin: auto;
   width: 100%;
+  padding: 20px 10px 80px;
 }
 
 .logo {
@@ -1040,7 +1041,7 @@ $icon-spacing: 4px;
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1280px) {
   .header .container {
-    padding: 0 10px 0 110px;
+    padding: 20px 10px 90px 110px;
   }
 }
 /* Small Devices, Tablets */
@@ -1115,6 +1116,10 @@ $icon-spacing: 4px;
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .header .container {
+    padding: 10px 10px 10px 90px;
+  }
+
   .section-title {
     font-size: 86px;
   }
@@ -1136,6 +1141,10 @@ $icon-spacing: 4px;
 
   .scroll-me-please {
     display: none;
+  }
+
+  .main-menu__item {
+    margin: 0 14px 0 0;
   }
 }
 @media only screen and (max-width: 640px) {

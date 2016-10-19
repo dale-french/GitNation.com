@@ -8,11 +8,12 @@
 	background-size: cover;
 	margin: 0;
 	display: flex;
-	height: 100vh;
+	min-height: 100vh;
 
 	.container{
 		margin: auto;
 		width: 100%;
+		padding: 20px 10px 80px;
 	}
 }
 

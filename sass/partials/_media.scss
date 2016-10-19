@@ -7,7 +7,7 @@
 @media only screen and (max-width : 1280px) {
 	.header{
 		.container{
-			padding: 0 10px 0 110px;
+			padding: 20px 10px 90px 110px;
 		}
 	}
 }
@@ -96,6 +96,12 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+	.header{
+		.container{
+			padding: 10px 10px 10px 90px;
+		}
+	}
+
 	.section-title{
 		font-size: 86px;
 	}
@@ -125,6 +131,13 @@
 
 	.scroll-me-please{
 		display: none;
+	}
+
+	.main-menu{
+
+		&__item{
+			margin: 0 14px 0 0;
+		}
 	}
 
 }
