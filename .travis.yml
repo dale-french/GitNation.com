@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - v5
+branches:
+  only:
+  - master
+after_success:
+- "./deploy.sh"
