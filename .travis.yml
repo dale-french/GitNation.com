@@ -1,9 +1,12 @@
 language: node_js
 node_js:
-  - v5
+  - "4.0"
+sudo: true
 deploy:
   provider: script
   script: ./deploy.sh
   skip_cleanup: true
   on:
     branch: master
+
+
