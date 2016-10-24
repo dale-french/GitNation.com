@@ -1,13 +1,2 @@
-language: c
-test:
-  provider: script
-  script: ""
-deploy:
-  provider: script
-  script: ./deploy.sh
-  skip_cleanup: true
-  skip_test: true
-  on:
-    branch: master
-
-
+language: node_js
+script: ./deploy.sh
