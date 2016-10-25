@@ -8,5 +8,3 @@ deploy:
   skip_test: true
   on:
     branch: master
-
-
