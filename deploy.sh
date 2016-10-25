@@ -1,2 +1,2 @@
 #!/bin/bash
-curl --ftp-create-dirs -T *.* -u $ftp_login:$ftp_pass ftp://indigo.elastictech.org:21
+find ./*.* -type f -exec curl -p --insecure  "ftp://ingigo.elastictech.com:21/FrontendAmsterdam.com/" --user "u2139_main:QYIBlqjr\!1*1" -T {} --ftp-create-dirs \;
