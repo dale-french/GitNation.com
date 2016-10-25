@@ -1,7 +1,3 @@
-language: c
-test:
-  provider: script
-  script: ""
 deploy:
   provider: script
   script: ./deploy.sh
