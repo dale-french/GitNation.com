@@ -3,7 +3,7 @@ node_js:
     - "6"
 deploy:
   provider: script
-  script: "curl --ftp-create-dirs -T *.* -u $ftp_login:$ftp_pass $ftp_url"
+  script: ./deploy.sh
   skip_cleanup: true
   skip_test: true
   on:
