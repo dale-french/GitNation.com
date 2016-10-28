@@ -1,3 +1,4 @@
+var gulp = require('gulp');
 var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 
