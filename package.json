@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/React-Amsterdam/FrontendAmsterdam.com/issues"
   },
-  "homepage": "https://github.com/React-Amsterdam/FrontendAmsterdam.com#readme"
+  "homepage": "https://github.com/React-Amsterdam/FrontendAmsterdam.com#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "minimist": "^1.2.0",
+    "vinyl-ftp": "^0.5.0"
+  }
 }
