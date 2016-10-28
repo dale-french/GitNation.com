@@ -6,9 +6,9 @@ var gutil = require('gulp-util');
 var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 gulp.task('deploy', function() {
-  var remotePath = '/public_html/';
+  var remotePath = '/frontendamsterdam.com/';
   var conn = ftp.create({
-    host: 'wecodetheweb.com',
+    host: 'indigo.elastictech.org',
     user: args.user,
     password: args.password,
     log: gutil.log
