@@ -6,9 +6,9 @@ var minimist = require('minimist');
 var args = minimist(process.argv.slice(2));
 
 gulp.task('deploy', function() {
-  var remotePath = '/domains/frontendamsterdam.com/';
+  var remotePath = '/';
   var conn = ftp.create({
-    host: 'indigo.elastictech.org',
+    host: 'indigo2.elastictech.org',
     user: args.user,
     password: args.password,
     log: gutil.log
