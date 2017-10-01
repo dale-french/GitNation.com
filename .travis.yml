@@ -3,7 +3,7 @@ node_js:
   - "8.6.0"
 install:
 - npm install
-after_success: gulp deploy --user $FTP_USER --password $FTP_PASSWORD
+after_success: gulp deploy --user $FTP_USER_NATION --password $FTP_PASSWORD_NATION
 branches:
   only:
-  - master
+  - frontendnation
