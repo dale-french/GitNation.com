@@ -6,4 +6,4 @@ install:
 after_success: gulp deploy --user $FTP_USER_NATION --password $FTP_PASSWORD_NATION
 branches:
   only:
-  - gitnation
+  - master
