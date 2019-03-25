@@ -27,7 +27,7 @@
 		color: #fff;
 		display: block;
 		text-decoration: none;
-		@include transition (none);
+		transition: none;
 	}
 }
 
@@ -96,7 +96,7 @@
 			opacity: 0;
 			height: 1px;
 			background: #fff;
-			@include transition (all ease .2s);
+			transition: all ease .2s;
 		}
 
 		&:hover{
@@ -141,4 +141,15 @@
 	height: 47px;
 	background: url(../svg/mouse_white.svg) no-repeat;
 	background-size: cover;
+}
+
+.banner {
+	:root & {
+		padding: 0;
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+	}
 }

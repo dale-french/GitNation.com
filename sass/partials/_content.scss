@@ -158,7 +158,7 @@
 			bottom: 0;
 			height: 0;
 			background-color: #fff;
-			@include transition (all linear .1s);
+			transition: all linear .1s;
 		}
 
 		&:hover{
@@ -181,8 +181,8 @@
 				height: 9px;
 				width: 9px;
 				background: #b3b2b2;
-				@include transform(rotate(45deg));
-				@include transition (background linear .2s);
+				transform: rotate(45deg);
+				transition: background linear .2s;
 			}
 
 			&:before{
@@ -193,7 +193,7 @@
 				height: 9px;
 				width: 9px;
 				background: #fff;
-				@include transform(rotate(45deg));
+				transform: rotate(45deg);
 				z-index: 1;
 			}
 
@@ -206,7 +206,7 @@
 				}
 			}
 		}
-		
+
 		&.m{
 			background: url(../svg/socials_m_gray.svg) center center no-repeat;
 
@@ -325,7 +325,7 @@
 		padding-top: 80px;
 		color: #fff;
 		text-decoration: underline;
-		@include transition (all ease-out .14s);
+		transition: all ease-out .14s;
 	}
 }
 
@@ -342,7 +342,7 @@
 
 		&:hover{
 			.sponsors-block__img{
-				@include transform(scale(0.95, 0.95));
+				transform: scale(0.95, 0.95);
 			}
 		}
 	}
@@ -350,7 +350,7 @@
 	&__img{
 		display: block;
 		margin: 0 auto;
-		@include transition (all ease-out .14s);
+		transition: all ease-out .14s;
 	}
 }
 
