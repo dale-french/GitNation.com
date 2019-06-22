@@ -9,6 +9,7 @@
 	margin: 0;
 	display: flex;
 	min-height: 100vh;
+	overflow: hidden;
 
 	.container{
 		margin: auto;
@@ -151,5 +152,56 @@
 	img {
 		max-width: 100%;
 		display: block;
+	}
+}
+
+.smiles{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #fe5619;
+	
+	&__row{
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+
+		&:nth-child(odd){
+			left: -4.17vw;
+		}
+
+		&.rnd{
+			background: #f00;
+		}
+	}
+
+	&__img{
+		width: 8.34vw;
+		height: calc(8.34vw * 1.11);
+		flex: 0 0 auto;
+		fill: #fe7800;
+		opacity: 1;
+		transition: opacity ease 1s;
+
+		&.hidden{
+			opacity: 0;
+		}
+	}
+
+	@media only screen and (max-width : 640px) {
+	
+		&__row{
+
+			&:nth-child(odd){
+				left: -8vw;
+			}
+		}
+
+		&__img{
+			width: 16vw;
+			height: calc(16vw * 1.11);
+		}
 	}
 }
