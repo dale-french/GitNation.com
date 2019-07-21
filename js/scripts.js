@@ -26,6 +26,16 @@ $(function() {
 		}
 	}
 
+	rotateLast()
+
+	function rotateLast(){
+		if ( rowsInSection % 2 == 0 ) {
+			$('.smiles__row:nth-child('+ (rowsInSection - 2) + ') .smiles__img:nth-child('+ (smilesInRow - 2) +')').attr('transform', 'rotate(-90)');
+		} else {
+			$('.smiles__row:nth-child('+ (rowsInSection - 2) + ') .smiles__img:nth-child('+ (smilesInRow - 1) +')').attr('transform', 'rotate(-90)');
+		}
+	}
+
 	function shuffle(array) {
 		var i = array.length,
 			j = 0,
@@ -51,9 +61,12 @@ $(function() {
 		var numItems = $('svg.smiles__img').length;
 		var selectedSmile = $('.smiles__row:nth-child('+ rndRow +') .smiles__img:nth-child('+ rndSmile +')');
 
-		selectedSmile.replaceWith('<svg class="smiles__img hidden" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/smiles.svg#smile_'+ rndSmile +'"></use></svg>');
-		$('.smiles').find('.smiles__img.hidden').animate({ opacity: 1 }, 100 );
-	}, 2000);
+		selectedSmile.replaceWith('<svg class="smiles__img" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/smiles.svg#smile_'+ rndSmile +'"></use></svg>');
+
+
+		rotateLast()
+
+	}, 1000);
 
 	/*---------------------------------------------------*/
 
