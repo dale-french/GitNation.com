@@ -16,6 +16,14 @@
 		width: 100%;
 		padding: 20px 10px 80px;
 	}
+
+	&_inner {
+		min-height: 0;
+
+		.container{
+			padding: 50px 0 50px;
+		}
+	}
 }
 
 .logo {
@@ -130,6 +138,18 @@
 		height: 9px;
 		background: #fff;
 	}
+
+	&_inner{
+		font: 66px/1.07 $lato;
+		font-weight: 700;
+	}
+}
+
+.slogan-desc {
+	position: relative;
+	font: 20px/1.46 $lato;
+	color: #fff;
+	margin: 50px 0 0
 }
 
 .scroll-me-please{
@@ -184,10 +204,15 @@
 		fill: #fe7800;
 		opacity: 1;
 		transition: opacity ease 1s;
+		display: none;
 
 		&.hidden{
 			opacity: 0;
 		}
+	}
+
+	.smiles__img {
+		display: block;
 	}
 
 	@media only screen and (max-width : 640px) {
