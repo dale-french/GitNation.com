@@ -183,10 +183,10 @@
 			margin-top: 0;
 		}
 	}
-	
+
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 568px) {
 	.header{
 		padding: 40px 0;
@@ -339,7 +339,7 @@
 	}
 }
 
-/* Custom, iPhone Retina */ 
+/* Custom, iPhone Retina */
 @media only screen and (max-width : 479px) {
 
 	.menu-btn{
@@ -348,7 +348,7 @@
 	}
 
 	.main-nav{
-		
+
 	}
 
 	.main-menu{
@@ -357,7 +357,7 @@
 
 	.header{
 		padding: 100px 0;
-		min-height: 100vh;
+		min-height: 80vh;
 
 		&_inner {
 			padding: 0;

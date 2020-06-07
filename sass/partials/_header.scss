@@ -147,6 +147,7 @@
 
 .slogan-desc {
 	position: relative;
+	width: 90%;
 	font: 20px/1.46 $lato;
 	color: #fff;
 	margin: 50px 0 0
@@ -182,7 +183,7 @@
 	right: 0;
 	bottom: 0;
 	background: #fe5619;
-	
+
 	&__row{
 		position: relative;
 		display: flex;
@@ -216,7 +217,7 @@
 	}
 
 	@media only screen and (max-width : 640px) {
-	
+
 		&__row{
 
 			&:nth-child(odd){

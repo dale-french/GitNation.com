@@ -101,8 +101,8 @@ gulp.task('watch', ['sass', 'css', 'browser-sync'], function() {
 	gulp.watch('sass/**/*.scss', ['sass']);
 	gulp.watch('css/style.css', ['css']);
 	gulp.watch('js/*.js', browserSync.reload);
+	gulp.watch('css/*.css', browserSync.reload);
 	gulp.watch('*.html', browserSync.reload);
-
 });
 
 gulp.task('build', ['sass', 'css']);
