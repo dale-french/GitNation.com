@@ -6,13 +6,9 @@ var 	autoprefixer	= require('autoprefixer'),
 		gutil			= require('gulp-util'),
 		sass			= require('gulp-sass'),
 		sourcemaps		= require('gulp-sourcemaps'),
-		size			= require('gulp-size'),
 		postcss			= require('gulp-postcss'),
 		wait			= require('gulp-wait'),
 		rename			= require('gulp-rename'),
-		svgSprite		= require('gulp-svg-sprite'),
-		cssnext			= require('postcss-cssnext'),
-		precss			= require('precss'),
 		ftp				= require('vinyl-ftp'),
 		minimist		= require('minimist');
 
@@ -63,52 +59,6 @@ gulp.task('css', function () {
 });
 
 // =============================================================================
-// SVG Sprite
-// =============================================================================
-
-gulp.task('sprite', function () {
-	return gulp.src('img/svg/*.svg')
-		.pipe( svgSprite({
-			shape: {
-				spacing: {
-					padding: 0
-				}
-			},
-			mode: {
-				css: {
-					dest: "img/",
-					layout: "diagonal",
-					sprite: '../sprite.svg',
-					bust: false,
-					render: {
-						scss: {
-							dest: "../../sass/partials/_sprite-svg.scss",
-							template: "sass/tpl/_sprite-tpl-css.scss"
-						}
-					}
-				},
-
-				symbol: {
-					dest: "img/",
-					layout: "diagonal",
-					sprite: '../sprite-inline.svg',
-					bust: false,
-					render: {
-						scss: {
-							dest: "../../../sass/partials/_sprite-svg-inline.scss",
-							template: "sass/tpl/_sprite-tpl-inline.scss"
-						}
-					}
-				}
-			},
-			variables: {
-				mapname: "icons"
-			}
-		}))
-		.pipe(gulp.dest('img/'));
-});
-
-// =============================================================================
 // BrowserSync
 // =============================================================================
 
@@ -148,12 +98,11 @@ gulp.task('deploy', function() {
 // =============================================================================
 
 gulp.task('watch', ['sass', 'css', 'browser-sync'], function() {
-	gulp.watch('img/sprite.svg');
 	gulp.watch('sass/**/*.scss', ['sass']);
 	gulp.watch('css/style.css', ['css']);
-	gulp.watch('svg/*.svg', ['sprite']);
 	gulp.watch('js/*.js', browserSync.reload);
 	gulp.watch('*.html', browserSync.reload);
+
 });
 
 gulp.task('build', ['sass', 'css']);
